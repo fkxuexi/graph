@@ -3,6 +3,16 @@ $(function () {
     var rect = draw.rect(200, 100).attr({fill: '#fff'}).addClass('process').radius(9)
     var rect2 = draw.rect(200, 100).attr({fill: '#fff'}).move(300, 300).addClass('process').radius(9)
 
+    rect.draggable({
+        minX: 10
+        , minY: 15
+        , maxX: 500
+        , maxY: 500
+        , snapToGrid: 20
+    })
+
+
+    var rect3 = rect.clone().move(300);
     draw.style({
         border:'1px solid #000',
     })
@@ -10,7 +20,7 @@ $(function () {
         'stroke':'red',
         'stroke-width':'1px'
     })
-    .mouseover(function (event) {
+   /* .mouseover(function (event) {
         SVG.select('.process').style({
             cursor: 'move',
         })
@@ -44,5 +54,5 @@ $(function () {
                this.move(newX,newY);
            }
         }
-    })
+    })*/
 })
