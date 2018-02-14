@@ -12,6 +12,12 @@ $(function () {
     })
 
 
+    var links = SVG.group();
+    var markers = SVG.group();
+
+
+
+
     var rect3 = rect.clone().move(300);
     draw.style({
         border:'1px solid #000',
